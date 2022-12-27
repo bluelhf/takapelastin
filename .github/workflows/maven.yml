@@ -29,7 +29,6 @@ jobs:
       with:
         name: Takapelastin
         path: target/Takapelastin.jar
-        error: Fail the action with an error message
         if-no-files-found: error
         retention-days: 400
 
