@@ -15,7 +15,7 @@ Still, the **best documentation is the code itself.** Maybe look around in [the 
 
 ### Execution
 With [Java](https://adoptium.net/temurin/releases/) installed:
-1. Get the .JAR file (for example using the [compilation steps](#compilation))
+1. Get the .JAR file from the [latest nightly artifact](https://nightly.link/bluelhf/takapelastin/workflows/maven/main/Takapelastin.zip) or by [compiling it yourself](#compilation).
 2. Run `java -jar <PATH TO .JAR FILE>`
 3. Navigate to http://localhost:8002/.
 
