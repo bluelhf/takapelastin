@@ -1,4 +1,4 @@
-package blue.lhf.takapelastin.checker.model;
+package blue.lhf.takapelastin.model;
 
 import blue.lhf.takapelastin.http.adapters.*;
 import jakarta.xml.bind.annotation.*;
@@ -7,10 +7,14 @@ import jakarta.xml.bind.annotation.adapters.*;
 import java.time.*;
 import java.util.*;
 
+import static jakarta.xml.bind.annotation.XmlAccessType.FIELD;
+
+/**
+ * Represents a capture of several drones, with a timestamp.
+ * */
 @SuppressWarnings("unused")
 @XmlRootElement(name = "capture")
-@XmlType(propOrder = {"timestamp", "drones"})
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(FIELD)
 public class DroneCapture {
     @XmlAttribute(name = "snapshotTimestamp")
     @XmlJavaTypeAdapter(value = XMLInstantAdapter.class)
@@ -19,8 +23,8 @@ public class DroneCapture {
     @XmlElement(name = "drone")
     private List<Drone> drones;
 
-    public List<Drone> withinZone(final Zone zone) {
-        return drones.stream().filter(drone -> zone.contains(drone.getPosition())).toList();
+    public List<Drone> dronesWithin(final Zone zone) {
+        return drones.stream().filter(drone -> zone.contains(drone.position())).toList();
     }
 
     public Instant timestamp() {

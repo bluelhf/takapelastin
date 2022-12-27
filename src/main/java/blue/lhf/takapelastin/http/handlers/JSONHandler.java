@@ -1,16 +1,18 @@
-package blue.lhf.takapelastin.http.parsers;
+package blue.lhf.takapelastin.http.handlers;
 
 import blue.lhf.takapelastin.http.exception.*;
-import blue.lhf.takapelastin.http.handlers.*;
 import com.google.gson.*;
 
 import java.io.*;
 
-public class JSONParser<T> implements StreamHandler<T> {
+/**
+ * Parses and unmarshals JSON data into the given class using Gson.
+ * */
+public class JSONHandler<T> implements StreamHandler<T> {
     private final Gson gson = new Gson();
     private final Class<T> targetClass;
 
-    public JSONParser(final Class<T> targetClass) {
+    public JSONHandler(final Class<T> targetClass) {
         this.targetClass = targetClass;
     }
 
@@ -20,6 +22,8 @@ public class JSONParser<T> implements StreamHandler<T> {
             return gson.fromJson(reader, targetClass);
         } catch (IOException e) {
             throw DataException.unfinishedData(e);
+        } catch (JsonSyntaxException e) {
+            throw DataException.invalidData(e);
         }
     }
 }

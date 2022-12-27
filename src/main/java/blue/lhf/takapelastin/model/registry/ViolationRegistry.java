@@ -1,6 +1,6 @@
-package blue.lhf.takapelastin.checker.registry;
+package blue.lhf.takapelastin.model.registry;
 
-import blue.lhf.takapelastin.checker.model.*;
+import blue.lhf.takapelastin.model.*;
 
 import java.time.*;
 import java.util.*;
@@ -12,5 +12,4 @@ public class ViolationRegistry extends HashMap<Pilot, Violation> {
             return age.compareTo(maximumAge) >= 0;
         });
     }
-
 }

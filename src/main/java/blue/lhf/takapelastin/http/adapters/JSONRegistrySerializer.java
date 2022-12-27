@@ -1,10 +1,14 @@
 package blue.lhf.takapelastin.http.adapters;
 
-import blue.lhf.takapelastin.checker.registry.*;
+import blue.lhf.takapelastin.model.registry.ViolationRegistry;
+import blue.lhf.takapelastin.server.StatusServer;
 import com.google.gson.*;
 
 import java.lang.reflect.*;
 
+/**
+ * Serializes the state of a {@link ViolationRegistry} into JSON for usage in the {@link StatusServer}.
+ * */
 public class JSONRegistrySerializer implements JsonSerializer<ViolationRegistry> {
 
     @Override

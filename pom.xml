@@ -2,8 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>Takapelastin</name>
+
     <groupId>blue.lhf</groupId>
     <artifactId>takapelastin</artifactId>
+    <version>1.0.0</version>
+
     <packaging>jar</packaging>
 
     <properties>
@@ -27,10 +31,45 @@
         </dependency>
     </dependencies>
 
-    <version>1.0.0</version>
-    <name>Takapelastin</name>
-
     <build>
-        <finalName>takapelastin</finalName>
+        <finalName>Takapelastin</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+
+                    <archive>
+                        <manifest>
+                            <mainClass>blue.lhf.takapelastin.Application</mainClass>
+                        </manifest>
+                    </archive>
+
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>pan-repo</id>
+            <name>Pandaemonium Repository</name>
+            <url>https://gitlab.com/api/v4/projects/18568066/packages/maven</url>
+        </repository>
+    </repositories>
+
 </project>
