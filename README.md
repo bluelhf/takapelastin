@@ -8,10 +8,10 @@ for reading XML and JSON, which were the data formats used in the
 problem statement. Additionally, I'm quite knowledgeable of Java,
 so it seemed like the natural choice.
 
-### Did you document any of this?
+### Documentation
 
-Yeah. Most things are documented using Javadoc. I'll add the GitHub Pages
-link once I get the Actions set up.
+Most classes in the project are documented in the [Javadoc](https://bluelhf.github.io/takapelastin/). That's probably the best place
+to start if you'd like to learn how I completed the assignment.
 
 ### Execution
 With [Java](https://adoptium.net/temurin/releases/) installed:
