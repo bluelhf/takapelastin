@@ -10,8 +10,8 @@ so it seemed like the natural choice.
 
 ### Documentation
 
-Most classes in the project are documented in the [Javadoc](https://bluelhf.github.io/takapelastin/). That's probably the best place
-to start if you'd like to learn how I completed the assignment.
+There's an online [Javadoc](https://bluelhf.github.io/takapelastin/) that's a good place for high-level information regarding the solution.
+Still, the **best documentation is the code itself.** Maybe look around in [the project package](src/main/java/blue/lhf/takapelastin)?
 
 ### Execution
 With [Java](https://adoptium.net/temurin/releases/) installed:
