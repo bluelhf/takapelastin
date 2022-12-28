@@ -47,7 +47,7 @@ public class StatusHandler implements HttpHandler {
             responseHeaders.add("Content-Type", "application/json;charset=utf-8");
 
             // Allow front-end URL
-            responseHeaders.add("Access-Control-Allow-Origin", "https://lhf.blue/etupelastin");
+            responseHeaders.add("Access-Control-Allow-Origin", "https://lhf.blue");
 
             exchange.sendResponseHeaders(200, bytes.length);
 
