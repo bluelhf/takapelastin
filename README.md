@@ -8,14 +8,14 @@ for reading XML and JSON, which were the data formats used in the
 problem statement. Additionally, I'm quite knowledgeable of Java,
 so it seemed like the natural choice.
 
-### Did you document any of this?
+### Documentation
 
-Yeah. Most things are documented using Javadoc. I'll add the GitHub Pages
-link once I get the Actions set up.
+There's an online [Javadoc](https://bluelhf.github.io/takapelastin/apidocs) that's a good place for high-level information regarding the solution.
+Still, the **best documentation is the code itself.** Maybe look around in [the project package](src/main/java/blue/lhf/takapelastin)?
 
 ### Execution
 With [Java](https://adoptium.net/temurin/releases/) installed:
-1. Get the .JAR file (for example using the [compilation steps](#compilation))
+1. Get the .JAR file from the [latest nightly artifact](https://nightly.link/bluelhf/takapelastin/workflows/maven/main/Takapelastin.zip) or by [compiling it yourself](#compilation).
 2. Run `java -jar <PATH TO .JAR FILE>`
 3. Navigate to http://localhost:8002/.
 
