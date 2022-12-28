@@ -43,7 +43,12 @@ public class StatusHandler implements HttpHandler {
             final String body = gson.toJson(checker, ViolationChecker.class);
             final byte[] bytes = body.getBytes(UTF_8);
 
-            exchange.getResponseHeaders().add("Content-Type", "application/json;charset=utf-8");
+            final Headers responseHeaders = exchange.getResponseHeaders();
+            responseHeaders.add("Content-Type", "application/json;charset=utf-8");
+
+            // Allow front-end URL
+            responseHeaders.add("Access-Control-Allow-Origin", "https://lhf.blue/etupelastin");
+
             exchange.sendResponseHeaders(200, bytes.length);
 
             try (final OutputStream response = exchange.getResponseBody()) {
