@@ -10,7 +10,7 @@ so it seemed like the natural choice.
 
 ### Documentation
 
-There's an online [Javadoc](https://bluelhf.github.io/takapelastin/) that's a good place for high-level information regarding the solution.
+There's an online [Javadoc](https://bluelhf.github.io/takapelastin/apidocs) that's a good place for high-level information regarding the solution.
 Still, the **best documentation is the code itself.** Maybe look around in [the project package](src/main/java/blue/lhf/takapelastin)?
 
 ### Execution
